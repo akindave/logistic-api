@@ -1,0 +1,1037 @@
+{
+	"info": {
+		"_postman_id": "2d2a47c4-3e59-41f9-bcdf-fc5942ebbae9",
+		"name": "Haul247 Logistic Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19537790",
+		"_collection_link": "https://restless-robot-661142.postman.co/workspace/7d1fd9c6-4aad-4a3e-b921-a6e27910bf72/collection/19537790-2d2a47c4-3e59-41f9-bcdf-fc5942ebbae9?action=share&source=collection_link&creator=19537790"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Akintan David\",\n    \"email\": \"akintand@haul.co\",\n    \"password\": \"password1234\",\n    \"role\": \"user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register as User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Akintan David\",\n    \"email\": \"akintand@haul.co\",\n    \"password\": \"password1234\",\n    \"role\": \"user\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jun 2025 13:01:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": [\n        {\n            \"name\": \"Akintan David\",\n            \"email\": \"akintand@haul.co\",\n            \"role\": \"user\",\n            \"updated_at\": \"2025-06-21T13:01:35.000000Z\",\n            \"created_at\": \"2025-06-21T13:01:35.000000Z\",\n            \"id\": 2\n        },\n        {\n            \"token\": \"1|Xsi6jsm0NU41ZeJWmACsyNxWAvUsZ11BK4m400rJ98e2f269\",\n            \"type\": \"access token\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Register as Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Akintan David\",\n    \"email\": \"admin@haul.co\",\n    \"password\": \"password1234\",\n    \"role\": \"admin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jun 2025 16:48:55 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": [\n        {\n            \"name\": \"Akintan David\",\n            \"email\": \"admin@haul.co\",\n            \"role\": \"admin\",\n            \"updated_at\": \"2025-06-21T16:48:55.000000Z\",\n            \"created_at\": \"2025-06-21T16:48:55.000000Z\",\n            \"id\": 3\n        },\n        {\n            \"token\": \"4|BEHdINARJvFOApTAx1ZbEaLatOBfd5kqG5c4mXP3394cd459\",\n            \"type\": \"access token\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"admin@haul.co\",\n    \"password\" : \"password1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sample invalid info",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\" : \"akintand@haul.co\",\n    \"password\" : \"12344556\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jun 2025 13:40:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid credentials\"\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\" : \"akintand@haul.co\",\n    \"password\" : \"password1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jun 2025 13:41:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": [\n        {\n            \"id\": 2,\n            \"name\": \"Akintan David\",\n            \"email\": \"akintand@haul.co\",\n            \"role\": \"user\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-06-21T13:01:35.000000Z\",\n            \"updated_at\": \"2025-06-21T13:01:35.000000Z\"\n        },\n        {\n            \"token\": \"2|ftJ7IOxZ89rNv6kmUuQWshD8EkGyjSEBKDiMZ8GZ30ea35c7\",\n            \"type\": \"access token\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "LogOut",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|ftJ7IOxZ89rNv6kmUuQWshD8EkGyjSEBKDiMZ8GZ30ea35c7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jun 2025 13:51:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully logged out\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Shipment",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sender_name\": \"Akin David\",\n    \"receiver_name\":\"Adeleke\",\n    \"origin_address\":\"82 Clerkenwell Road, London, UK\",\n    \"destination_address\":\"6 Rue Massillon, 30020 Nîmes, France\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/shipments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"shipments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Sample",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sender_name\": \"Akin David\",\n    \"receiver_name\":\"Adeleke\",\n    \"origin_address\":\"82 Clerkenwell Road, London, UK\",\n    \"destination_address\":\"6 Rue Massillon, 30020 Nîmes, France\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/shipments",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"shipments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jun 2025 16:24:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"sender_name\": \"Akin David\",\n    \"receiver_name\": \"Adeleke\",\n    \"origin_address\": \"82 Clerkenwell Road, London, UK\",\n    \"destination_address\": \"6 Rue Massillon, 30020 Nîmes, France\",\n    \"origin_coords\": \"51.5226742,-0.1025238\",\n    \"destination_coords\": \"43.8316276,4.360081\",\n    \"created_by\": 2,\n    \"tracking_number\": \"ce49f37e99\",\n    \"updated_at\": \"2025-06-21T16:24:17.000000Z\",\n    \"created_at\": \"2025-06-21T16:24:17.000000Z\",\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Shipments",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "success with filter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/shipments?status=pending",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"shipments"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "pending"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jun 2025 16:48:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"tracking_number\": \"ce49f37e99\",\n            \"sender_name\": \"Akin David\",\n            \"receiver_name\": \"Adeleke\",\n            \"origin_address\": \"82 Clerkenwell Road, London, UK\",\n            \"destination_address\": \"6 Rue Massillon, 30020 Nîmes, France\",\n            \"origin_coords\": \"51.5226742,-0.1025238\",\n            \"destination_coords\": \"43.8316276,4.360081\",\n            \"status\": \"Pending\",\n            \"created_by\": 2,\n            \"created_at\": \"2025-06-21T16:24:17.000000Z\",\n            \"updated_at\": \"2025-06-21T16:24:17.000000Z\"\n        }\n    ],\n    \"first_page_url\": \"http://127.0.0.1:8000/api/shipments?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://127.0.0.1:8000/api/shipments?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/shipments?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://127.0.0.1:8000/api/shipments\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 1,\n    \"total\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Track By number",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sender_name\": \"Akin David\",\n    \"receiver_name\":\"Adeleke\",\n    \"origin_address\":\"82 Clerkenwell Road, London, UK\",\n    \"destination_address\":\"6 Rue Massillon, 30020 Nîmes, France\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/track/:tracking_id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"track",
+								":tracking_id"
+							],
+							"variable": [
+								{
+									"key": "tracking_id",
+									"value": "ce49f37e99"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not found shipment",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sender_name\": \"Akin David\",\n    \"receiver_name\":\"Adeleke\",\n    \"origin_address\":\"82 Clerkenwell Road, London, UK\",\n    \"destination_address\":\"6 Rue Massillon, 30020 Nîmes, France\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/track/:tracking_id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"track",
+										":tracking_id"
+									],
+									"variable": [
+										{
+											"key": "tracking_id",
+											"value": "9203829038203820"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jun 2025 17:02:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Shipment not found\"\n}"
+						},
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sender_name\": \"Akin David\",\n    \"receiver_name\":\"Adeleke\",\n    \"origin_address\":\"82 Clerkenwell Road, London, UK\",\n    \"destination_address\":\"6 Rue Massillon, 30020 Nîmes, France\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/track/:tracking_id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"track",
+										":tracking_id"
+									],
+									"variable": [
+										{
+											"key": "tracking_id",
+											"value": "ce49f37e99"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jun 2025 17:03:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"tracking_number\": \"ce49f37e99\",\n    \"sender_name\": \"Akin David\",\n    \"receiver_name\": \"Adeleke\",\n    \"origin_address\": \"82 Clerkenwell Road, London, UK\",\n    \"destination_address\": \"6 Rue Massillon, 30020 Nîmes, France\",\n    \"origin_coords\": \"51.5226742,-0.1025238\",\n    \"destination_coords\": \"43.8316276,4.360081\",\n    \"status\": \"Pending\",\n    \"created_by\": 2,\n    \"created_at\": \"2025-06-21T16:24:17.000000Z\",\n    \"updated_at\": \"2025-06-21T16:24:17.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Change Status",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "unauthorized",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\":\"Sorted\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/shipments/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"shipments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jun 2025 17:46:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"This action is unauthorized.\"\n}"
+						},
+						{
+							"name": "Invalid Status",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\":\"Sorted\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/shipments/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"shipments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jun 2025 17:47:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The selected status is invalid.\"\n}"
+						},
+						{
+							"name": "status success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\":\"In‑Transit\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/shipments/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"shipments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jun 2025 18:41:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"tracking_number\": \"ce49f37e99\",\n    \"sender_name\": \"Akin David\",\n    \"receiver_name\": \"Adeleke\",\n    \"origin_address\": \"82 Clerkenwell Road, London, UK\",\n    \"destination_address\": \"6 Rue Massillon, 30020 Nîmes, France\",\n    \"origin_coords\": \"51.5226742,-0.1025238\",\n    \"destination_coords\": \"43.8316276,4.360081\",\n    \"status\": \"In‑Transit\",\n    \"created_by\": 2,\n    \"created_at\": \"2025-06-21T16:24:17.000000Z\",\n    \"updated_at\": \"2025-06-21T18:41:18.000000Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Logs",
+			"item": [
+				{
+					"name": "Get Logs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"admin@haul.co\",\n    \"password\" : \"password1234\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/logs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"logs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sample",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\" : \"admin@haul.co\",\n    \"password\" : \"password1234\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/logs",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"logs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 04:16:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 5,\n            \"action\": \"user-login\",\n            \"user_id\": 3,\n            \"ip_address\": \"127.0.0.1\",\n            \"metadata\": \"{\\\"user\\\":{\\\"id\\\":3,\\\"name\\\":\\\"Akintan David\\\",\\\"email\\\":\\\"admin@haul.co\\\",\\\"role\\\":\\\"admin\\\",\\\"email_verified_at\\\":null,\\\"created_at\\\":\\\"2025-06-21T16:48:55.000000Z\\\",\\\"updated_at\\\":\\\"2025-06-21T16:48:55.000000Z\\\"}}\",\n            \"created_at\": \"2025-06-22T04:12:50.000000Z\",\n            \"updated_at\": \"2025-06-22T04:12:50.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"action\": \"user-login\",\n            \"user_id\": 2,\n            \"ip_address\": \"127.0.0.1\",\n            \"metadata\": \"{\\\"user\\\":{\\\"id\\\":2,\\\"name\\\":\\\"Akintan David\\\",\\\"email\\\":\\\"akintand@haul.co\\\",\\\"role\\\":\\\"user\\\",\\\"email_verified_at\\\":null,\\\"created_at\\\":\\\"2025-06-21T13:01:35.000000Z\\\",\\\"updated_at\\\":\\\"2025-06-21T13:01:35.000000Z\\\"}}\",\n            \"created_at\": \"2025-06-22T04:05:55.000000Z\",\n            \"updated_at\": \"2025-06-22T04:05:55.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"action\": \"shipment.update\",\n            \"user_id\": 3,\n            \"ip_address\": \"127.0.0.1\",\n            \"metadata\": \"{\\\"shipment\\\":{\\\"id\\\":3,\\\"tracking_number\\\":\\\"e763127c71\\\",\\\"sender_name\\\":\\\"Akin David\\\",\\\"receiver_name\\\":\\\"Adeleke\\\",\\\"origin_address\\\":\\\"82 Clerkenwell Road, London, UK\\\",\\\"destination_address\\\":\\\"6 Rue Massillon, 30020 N\\\\u00eemes, France\\\",\\\"origin_coords\\\":\\\"51.5226742,-0.1025238\\\",\\\"destination_coords\\\":\\\"43.8316276,4.360081\\\",\\\"status\\\":\\\"Pending\\\",\\\"created_by\\\":3,\\\"created_at\\\":\\\"2025-06-22T03:51:46.000000Z\\\",\\\"updated_at\\\":\\\"2025-06-22T03:51:46.000000Z\\\"}}\",\n            \"created_at\": \"2025-06-22T03:52:59.000000Z\",\n            \"updated_at\": \"2025-06-22T03:52:59.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"action\": \"shipment.creation\",\n            \"user_id\": 3,\n            \"ip_address\": \"127.0.0.1\",\n            \"metadata\": \"{\\\"shipment\\\":{\\\"sender_name\\\":\\\"Akin David\\\",\\\"receiver_name\\\":\\\"Adeleke\\\",\\\"origin_address\\\":\\\"82 Clerkenwell Road, London, UK\\\",\\\"destination_address\\\":\\\"6 Rue Massillon, 30020 N\\\\u00eemes, France\\\",\\\"origin_coords\\\":\\\"51.5226742,-0.1025238\\\",\\\"destination_coords\\\":\\\"43.8316276,4.360081\\\",\\\"created_by\\\":3,\\\"tracking_number\\\":\\\"e763127c71\\\",\\\"updated_at\\\":\\\"2025-06-22T03:51:46.000000Z\\\",\\\"created_at\\\":\\\"2025-06-22T03:51:46.000000Z\\\",\\\"id\\\":3}}\",\n            \"created_at\": \"2025-06-22T03:51:47.000000Z\",\n            \"updated_at\": \"2025-06-22T03:51:47.000000Z\"\n        },\n        {\n            \"id\": 1,\n            \"action\": \"user-login\",\n            \"user_id\": 3,\n            \"ip_address\": \"127.0.0.1\",\n            \"metadata\": \"{\\\"user\\\":{\\\"id\\\":3,\\\"name\\\":\\\"Akintan David\\\",\\\"email\\\":\\\"admin@haul.co\\\",\\\"role\\\":\\\"admin\\\",\\\"email_verified_at\\\":null,\\\"created_at\\\":\\\"2025-06-21T16:48:55.000000Z\\\",\\\"updated_at\\\":\\\"2025-06-21T16:48:55.000000Z\\\"}}\",\n            \"created_at\": \"2025-06-22T03:46:49.000000Z\",\n            \"updated_at\": \"2025-06-22T03:46:49.000000Z\"\n        }\n    ],\n    \"first_page_url\": \"http://127.0.0.1:8000/api/logs?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://127.0.0.1:8000/api/logs?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/logs?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://127.0.0.1:8000/api/logs\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 5,\n    \"total\": 5\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "13|GxJoQGVoNk8yFIDj1LdQwad5SlUHRjXET1TcJp9x057f399c",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}

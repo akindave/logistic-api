@@ -21,7 +21,7 @@ A modular monolith backend API for logistics management built with Laravel.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/logistics-platform.git
+   git clone https://github.com/akindave/logistic-api.git
 2. Start container:
    ```bash
    docker-compose up -d --build
@@ -32,14 +32,13 @@ A modular monolith backend API for logistics management built with Laravel.
    ```bash
    docker-compose exec app php artisan migrate
 ## Visit this link in your Postman
-    ```bash
     http://localhost:8000/api
 
 ### Without Docker
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/logistics-platform.git
+   git clone https://github.com/akindave/logistic-api.git
 2. Start container:
    ```bash
    composer install
@@ -55,7 +54,7 @@ A modular monolith backend API for logistics management built with Laravel.
 5. Serve your application:
    ```bash
    php artisan serve
-   
+
 ## Visit this link in your Postman
     ```bash
     http://localhost:8000/api
