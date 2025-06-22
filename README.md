@@ -56,11 +56,10 @@ A modular monolith backend API for logistics management built with Laravel.
    php artisan serve
 
 ## Visit this link in your Postman
-    ```bash
     http://localhost:8000/api
 
 ## Postman Collection
 
 You can find the Postman API collection for this project here:
 
-👉 [Logistic API Postman Collection](link)
+👉 [Logistic API Postman Collection](https://github.com/akindave/logistic-api/blob/main/Haul247%20Logistic%20Api.postman_collection.json)
