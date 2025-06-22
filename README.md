@@ -76,3 +76,23 @@ A modular monolith backend API for logistics management built with Laravel.
 You can find the Postman API collection for this project here:
 
 👉 [Logistic API Postman Collection](https://github.com/akindave/logistic-api/blob/main/Haul247%20Logistic%20Api.postman_collection.json)
+
+API Documentation
+Authentication
+POST /api/register - Register a new user
+
+POST /api/login - Login with existing user
+
+POST /api/logout - Logout (requires authentication)
+
+Shipments
+GET /api/shipments - List shipments (filterable by status)
+
+POST /api/shipments - Create a new shipment
+
+PATCH /api/shipments/{id} - Update shipment status (admin only)
+
+GET /api/track/{tracking_number} - Track a shipment
+
+Monitoring
+GET /api/logs - View system logs (admin only)
