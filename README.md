@@ -31,7 +31,9 @@ A modular monolith backend API for logistics management built with Laravel.
 4. Run migrations:
    ```bash
    docker-compose exec app php artisan migrate
-
+5. Start Queue :
+   ```bash
+   docker-compose exec app php artisan queue:work --daemon
 ## To run test 
    docker-compose run --rm app php artisan test
 
@@ -55,9 +57,13 @@ A modular monolith backend API for logistics management built with Laravel.
 5. Run migrations:
    ```bash
    php artisan migrate
-5. Serve your application:
+6. Serve your application:
    ```bash
    php artisan serve
+7. Start Queue :
+   ```bash
+   php artisan queue:work
+
 
 ## To run test 
    php artisan test
