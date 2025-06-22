@@ -31,6 +31,10 @@ A modular monolith backend API for logistics management built with Laravel.
 4. Run migrations:
    ```bash
    docker-compose exec app php artisan migrate
+
+## To run test 
+   docker-compose run --rm app php artisan test
+
 ## Visit this link in your Postman
     http://localhost:8000/api
 
@@ -54,6 +58,9 @@ A modular monolith backend API for logistics management built with Laravel.
 5. Serve your application:
    ```bash
    php artisan serve
+
+## To run test 
+   php artisan test
 
 ## Visit this link in your Postman
     http://localhost:8000/api
